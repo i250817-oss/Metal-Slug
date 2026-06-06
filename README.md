@@ -503,8 +503,8 @@ Metal-Slug/
 
 Special thanks to our **goated instructor Shehreyar Rashid** for assigning this project and pushing us far beyond typical coursework.
 
-Special salute to group leader **Muhammad Osaid Zahid** for giving 100 percent every single time.
+Special salute to group leader And my best project partner **Muhammad Osaid Zahid** for giving 100 percent every single time.
 
 ---
 
-*Built with C++ | SFML | Pure OOP | No Engine | No STL*
+*Built with C++ | SFML | Pure OOP | No Engine | No STL(EXCEPT IN THE EXTRA FEATURE OF URDU ASSEMBLY LANGUAGE WHICH WAS PROIVIDED IN OUR ASSIGNMENT)*
