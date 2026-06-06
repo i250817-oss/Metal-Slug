@@ -6,9 +6,9 @@
 
 ## 👥 Team
 
--> **Muhammad Osaid Zahid** ( Group Leader)
+-> **Muhammad Osaid Zahid** — Group Leader
 
--> **Ahmad Ali Shah** (Developer)
+-> **[Your Name]** — Developer
 
 ---
 
@@ -20,13 +20,13 @@ A Metal Slug inspired 2D action shooter where the **Peregrine Falcon Strike Forc
 
 ## 🧑‍🤝‍🧑 Playable Characters
 
--> **Marco Rossi** , balanced stats, reliable heavy machine gun
+-> **Marco Rossi** — balanced stats, reliable heavy machine gun
 
--> **Tarma Roving** , vehicle specialist, faster slug boarding
+-> **Tarma Roving** — vehicle specialist, faster slug boarding
 
--> **Eri Kasamoto** ,grenade expert, high explosive damage
+-> **Eri Kasamoto** — grenade expert, high explosive damage
 
--> **Fio Germi** , ammo specialist, extended weapon duration
+-> **Fio Germi** — ammo specialist, extended weapon duration
 
 -> Each character has unique buffs, weaknesses, and a separate independent inventory
 
@@ -46,13 +46,13 @@ A Metal Slug inspired 2D action shooter where the **Peregrine Falcon Strike Forc
 
 ## 🚗 Vehicles
 
--> **Metal Slug Tank** , ground assault, heavy cannon
+-> **Metal Slug Tank** — ground assault, heavy cannon
 
--> **Slug Flyer** , aerial combat, air to ground missiles
+-> **Slug Flyer** — aerial combat, air to ground missiles
 
--> **Slug Mariner** , underwater combat, torpedo system
+-> **Slug Mariner** — underwater combat, torpedo system
 
--> **Amphibious Slug** , auto-transforms based on current biome, ground, water, air
+-> **Amphibious Slug** — auto-transforms based on current biome, ground, water, air
 
 ---
 
@@ -98,15 +98,15 @@ Level (abstract)
 
 ## 👾 Boss Level — 5 Phase Design
 
--> **Phase 1 (Plains)** ,Iron Nokana tank boss
+-> **Phase 1 (Plains)** — Iron Nokana tank boss
 
--> **Phase 2 (Aerial)** , Hairbuster Riberts airborne boss
+-> **Phase 2 (Aerial)** — Hairbuster Riberts airborne boss
 
--> **Phase 3 (Aquatic)** , Sea Satan deep water boss
+-> **Phase 3 (Aquatic)** — Sea Satan deep water boss
 
--> **Phase 4 (Fusion Prep)** , 3-second dramatic countdown at col 280
+-> **Phase 4 (Fusion Prep)** — 3-second dramatic countdown at col 280
 
--> **Phase 5 (Fusion Fight)** ,Fusion Boss spawns dynamically, inherits from all three boss classes and dispatches attacks, sprites, and health polymorphically based on combat mode
+-> **Phase 5 (Fusion Fight)** — Fusion Boss spawns dynamically, inherits from all three boss classes and dispatches attacks, sprites, and health polymorphically based on combat mode
 
 -> World pixel width is locked per phase, player cannot advance until the active boss is killed
 
@@ -124,31 +124,31 @@ Level (abstract)
 
 -> Channel 2 (y = 7.3), high frequency local detail for grass bumps and small hills
 
--> **Domain Warping** , Perlin noise added to sine wave phase, stretches and squashes biome widths randomly, giving each mountain and ocean basin a unique width while remaining perfectly smooth
+-> **Domain Warping** — Perlin noise added to sine wave phase, stretches and squashes biome widths randomly, giving each mountain and ocean basin a unique width while remaining perfectly smooth
 
--> **Sine cubing (x³ shaping)** , flattens the sine wave near zero to produce wide beautiful plains while keeping mountain peaks and ocean depths sharp
+-> **Sine cubing (x³ shaping)** — flattens the sine wave near zero to produce wide beautiful plains while keeping mountain peaks and ocean depths sharp
 
--> **NoiseProfile polymorphism** ,InfinityLevel holds a `NoiseProfile*` pointer and never knows the concrete type
+-> **NoiseProfile polymorphism** — InfinityLevel holds a `NoiseProfile*` pointer and never knows the concrete type
 
--> `NormalProfile` , amplitude 1.0, frequency 0.08, 4 octaves, persistence 0.5
+-> `NormalProfile` — amplitude 1.0, frequency 0.08, 4 octaves, persistence 0.5
 
--> `AmplifiedProfile` , amplitude 2.5, frequency 0.06, 6 octaves, extreme mountains
+-> `AmplifiedProfile` — amplitude 2.5, frequency 0.06, 6 octaves, extreme mountains
 
--> `FlatProfile` ,amplitude 0.4, frequency 0.12, 2 octaves, near-flat terrain
+-> `FlatProfile` — amplitude 0.4, frequency 0.12, 2 octaves, near-flat terrain
 
 -> **NoiseProfileFactory::create()** returns the correct subtype at runtime, adding a new terrain profile means adding one class and touching nothing else
 
 -> **FractalNoise** wraps **PerlinNoise** and delegates to `generateHeightOctaves()` which implements the paper's 1/f octave loop: `Noise(point * 2^i) / 2^i`
 
--> **Improved fade function** , upgraded from Perlin's 1985 cubic `3t² - 2t³` to his 2002 quintic `6t⁵ - 15t⁴ + 10t³`, zero second derivative at endpoints, eliminating visible grid artifacts
+-> **Improved fade function** — upgraded from Perlin's 1985 cubic `3t² - 2t³` to his 2002 quintic `6t⁵ - 15t⁴ + 10t³`, zero second derivative at endpoints, eliminating visible grid artifacts
 
--> **Dynamic enemy spawning** , every 5-8 seconds a batch of enemies spawns 900 pixels ahead of the player, selected from biome-appropriate pools
+-> **Dynamic enemy spawning** — every 5-8 seconds a batch of enemies spawns 900 pixels ahead of the player, selected from biome-appropriate pools
 
--> **Completion condition** , kill 5 of each enemy type and 3 of each enemy vehicle
+-> **Completion condition** — kill 5 of each enemy type and 3 of each enemy vehicle
 
 ---
 
-## 🤖 Self-Playing AI aka NEAT
+## 🤖 Self-Playing AI — NEAT
 
 **NEAT (NeuroEvolution of Augmenting Topologies)** proposed by Kenneth Stanley and Risto Miikkulainen (2002).
 
@@ -275,15 +275,17 @@ Entity (abstract)
 
 ---
 
-## 🎬 Demo (2nd link)
+## 🎬 Demo
 
 -> [GitHub Repository Link]
 
 -> [Gameplay Video Link]
 
 ---
+
 ## 📁 Project Directory
- 
+
+```
 Metal-Slug/
 ├── main.cpp
 ├── player_save.txt
@@ -494,8 +496,9 @@ Metal-Slug/
     ├── fio_coords.txt
     └── FiolitaGermi_Sprite_Doc.pdf
 ```
- 
+
 ---
+
 ## 🙏 Special Thanks
 
 Special thanks to our **goated instructor Shehreyar Rashid** for assigning this project and pushing us far beyond typical coursework.
