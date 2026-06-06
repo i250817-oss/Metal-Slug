@@ -282,7 +282,220 @@ Entity (abstract)
 -> [Gameplay Video Link]
 
 ---
-
+## 📁 Project Directory
+ 
+Metal-Slug/
+├── main.cpp
+├── player_save.txt
+├── score_history.txt
+│
+├── headers/
+│   ├── headers.h
+│   └── string.h
+│
+├── assembly/
+│   ├── assembly.cpp
+│   └── assembly.h
+│
+├── Entity Root/
+│   ├── Entity.h
+│   └── DamagableEntity.h
+│
+├── Character System/
+│   ├── Soldier.h
+│   ├── PlayerSoldier.h
+│   ├── MarcoRossi.h
+│   ├── Tarma.h
+│   ├── EriKasamoto.h
+│   ├── FiolinaGermi.h
+│   ├── TransformationState.h
+│   ├── FusionCompanion.h
+│   └── FusionCompanion.cpp
+│
+├── Enemy System/
+│   ├── Enemy.h / Enemy.cpp
+│   ├── EnemyAIState.h / EnemyAIState.cpp
+│   ├── Aerial/
+│   │   ├── AerialEnemy.h
+│   │   └── Paratrooper.h
+│   ├── Alien/
+│   │   └── AlienEnemy.h
+│   ├── Infantry/
+│   │   ├── InfantryEnemy.h / InfantryEnemy.cpp
+│   │   ├── RebelSoldier.h
+│   │   ├── ShieldedSoldier.h
+│   │   ├── GrenadeSoldier.h
+│   │   └── BazookaSoldier.h
+│   ├── Undead/
+│   │   ├── UndeadEnemy.h
+│   │   ├── Zombie.h
+│   │   └── MummyWarrior.h
+│   └── Boss/
+│       ├── Boss.h
+│       ├── IronNokana.h
+│       ├── HairbusterRiberts.h
+│       ├── SeaSatan.h
+│       └── FusionBoss.h
+│
+├── Vehicle System/
+│   ├── Vehicle.h / Vehicle.cpp
+│   ├── GroundVehicle.h
+│   ├── AerialVehicle.h
+│   ├── AquaticVehicle.h
+│   ├── EnemyVehicle.h
+│   ├── PlayerVehicle.h
+│   ├── Player Vehicles/
+│   │   ├── MetalSlug.h
+│   │   ├── SlugFlyer.h
+│   │   ├── SlugMariner.h
+│   │   └── AmphibiousSlug.h
+│   └── Enemy Vehicles/
+│       ├── FlyingTara.h
+│       ├── EnemySub.h
+│       └── M15ABradley.h
+│
+├── Weapon System/
+│   ├── Weapon.h
+│   ├── Ammo.h
+│   ├── NonProjectileWeapon.h
+│   ├── ProjectileWeapon.h
+│   ├── FireArms/
+│   │   ├── FireArms.h
+│   │   ├── HeavyMachineGun.h
+│   │   ├── RocketLauncher.h
+│   │   ├── FlameShot.h
+│   │   ├── LaserGun.h
+│   │   └── Pistol.h
+│   ├── Explosives/
+│   │   ├── Explosives.h
+│   │   ├── HandGrenade.h
+│   │   └── FireBombGrenade.h
+│   └── Melee/
+│       └── Knife.h
+│
+├── Projectile System/
+│   ├── Projectile.h
+│   ├── StraightProjectile.h
+│   ├── BallisticProjectile.h
+│   ├── Bullet.h / Bullet.cpp
+│   ├── Rocket.h / Rocket.cpp
+│   ├── Grenade.h / Grenade.cpp
+│   ├── EnergyBeam.h / EnergyBeam.cpp
+│   ├── FireBomb.h / FireBomb.cpp
+│   ├── FlameStream.h / FlameStream.cpp
+│   └── StraightProjectile.h
+│
+├── Noise System/
+│   ├── NoiseProfile.h
+│   ├── NoiseProfileFactory.h
+│   ├── NormalProfile.h
+│   ├── AmplifiedProfile.h
+│   ├── FlatProfile.h
+│   ├── PerlinNoise.h
+│   └── factrialNoise.h
+│
+├── NEAT/
+│   ├── NodeGene.h
+│   ├── ConnectionGene.h
+│   ├── NeatGenome.h
+│   ├── NeatAgent.h
+│   └── NeatPopulation.h
+│
+├── Level and Environment System/
+│   ├── Level.h
+│   ├── LevelBase.h
+│   ├── LevelProfile.h
+│   ├── Level1.h
+│   ├── Level2.h
+│   ├── Level3.h
+│   ├── BossLevel.h
+│   ├── InfinityLevel.h
+│   ├── CampaignLevel.h
+│   ├── camera.h
+│   ├── spawnPoint.h
+│   ├── perlin.h
+│   ├── Biome.h / AerialBiome.h / AquaticBiome.h / PlainsBiome.h
+│   ├── Block.h
+│   ├── block/
+│   │   ├── airblock.h, solidblock.h, platformblock.h
+│   │   ├── indistructable.h, seafloorBlock.h, shipHull.h
+│   │   ├── waterSurfaceblock.h, waterDeepblock.h
+│   │   ├── BarrelDestructable.h, mountainTop.h
+│   │   └── (spawn blocks, biome subs)
+│   └── Enemies/
+│       └── (enemy header references)
+│
+├── Manager/
+│   ├── EntityManager.h / EntityManager.cpp
+│   ├── LevelManager.h
+│   └── SoundManager.h
+│
+├── Core Engine And States/
+│   ├── Game.h
+│   ├── GameState.h
+│   ├── GameStateManager.h
+│   ├── PlayState.h
+│   ├── GameOverState.h
+│   ├── LoadingState.h
+│   ├── ResultsState.h
+│   ├── mainmenu.h
+│   ├── PlayerFactory.h
+│   ├── LevelFactory.h
+│   ├── DamageOverlay.h / DamageOverlay.cpp
+│   ├── VoiceRecognition.h
+│   └── UrduDeveloperTerminal.h
+│
+├── Game Mode System/
+│   ├── GameMode.h
+│   ├── CampaignMode.h
+│   └── SurvivalMode.h
+│
+├── Collectible and Interactable System/
+│   ├── Collectible.h / Collectible.cpp
+│   ├── InteractableObject.h
+│   ├── EnemyDropSystem.h
+│   ├── Food.h
+│   ├── Fruit.h / Fruit.cpp
+│   ├── Turkey.h / Turkey.cpp
+│   ├── SupplyBox.h / SupplyBox.cpp
+│   └── POWPrisoner.h / POWPrisoner.cpp
+│
+├── ScoreCard/
+│   ├── ScoreCard.h
+│   ├── PlayerScoreCard.h
+│   └── Enemies/
+│       ├── EnemyScore.h, RebelScore.h, ShieldedScore.h
+│       ├── GrenadeScore.h, BazookaScore.h, MummyScore.h
+│       ├── ZombieScore.h, MartianScore.h
+│
+├── Sprite System/
+│   └── MainSprite.h
+│
+├── Sprites/
+│   ├── (character sprites, enemy sprites, block textures)
+│   ├── bgs/        (background images per biome)
+│   ├── blocks/     (block textures)
+│   ├── Enemies/    (enemy sprite sheets)
+│   └── Character/  (companion sprites)
+│
+├── sound/
+│   ├── (stage music .mp3)
+│   ├── (character voice .ogg)
+│   ├── (weapon and effect sounds .ogg)
+│   └── valar_morghulis.wav
+│
+├── Founts/
+│   └── Metal-Slug-Latino-Regular.ttf
+│
+├── main menu/
+│   └── (menu background images)
+│
+└── Update/
+    ├── fio_coords.txt
+    └── FiolitaGermi_Sprite_Doc.pdf
+```
+ 
+---
 ## 🙏 Special Thanks
 
 Special thanks to our **goated instructor Shehreyar Rashid** for assigning this project and pushing us far beyond typical coursework.
