@@ -1,0 +1,2617 @@
+Fiolina Germi
+Sprite Sheet Documentation
+Pistol Configuration — Complete Reference
+
+Character: Fiolina Germi (Female Soldier)
+Weapon: Pistol Only
+Sprite Sheet File: Fiolina Germi.png
+Location: /home/ahmad-ali/Downloads/FInal Backup 7_30/Sprites/
+Coordinate System: x = left offset, y = top offset, w = width, h = height (pixels)
+
+ò Note
+
+All coordinates reference the full Fiolina Germi.png sprite sheet. Each entry gives the top-left
+corner (x, y) and dimensions w × h of the bounding rectangle for that frame. The document
+is ordered to match the provided image sequence (Image 1 through Image 17).
+
+Generated for Overleaf / pdflatex
+
+—
+
+Pistol Series v1.0
+
+Fiolina Germi — Sprite Sheet Reference
+
+0
+
+Pistol Only
+
+Contents
+
+1
+
+1 Falling From Air — Without Parachute
+
+3
+
+2 Standing (Idle) Animation
+2.1 Top Body — Standing Idle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2 Bottom Body — Standing Idle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4
+4
+4
+
+3 Running Animation
+3.1 Top Body — Running . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3.2 Bottom Body — Running . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+5
+6
+
+4 Slow Walk Animation
+
+7
+
+5 Eat / Item Pickup Animation
+5.1 Frames 1–27 (First Row) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.2 Frames 28–36 (Second Row) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.3 Frames 37–52 (Third Row) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+8
+9
+9
+10
+
+6 Neat Call (Whistle / Signal) Animation
+
+11
+
+7 Jumping Animations
+7.1 Straight (Stationary) Jump — Top Body . . . . . . . . . . . . . . . . . . . . . . . . .
+7.2 Straight (Stationary) Jump — Bottom Body . . . . . . . . . . . . . . . . . . . . . .
+7.3 Running Jump — Top Body . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7.4 Running Jump — Bottom Body . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+12
+12
+13
+13
+13
+
+8 Crouching Animations
+8.1 Ready-to-Crouch Transition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8.2 Crouched Idle (Sitting, No Action) . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8.3 Crouch and Move (Crouch Walk) . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+14
+14
+14
+15
+
+9 Pistol Firing Animations
+9.1 Straight Fire (Standing) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9.2 Straight Fire While Jumping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9.3 Straight Fire While Crouching . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9.4 Fire Upward (Top Fire) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9.5 Fire Downward (Bottom Fire) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9.6 Sliding (No Fire) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9.7 Sliding Fire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+16
+16
+17
+17
+18
+18
+19
+19
+
+10 Reloading Animation
+
+20
+
+11 Melee Attack (Milli / Knife) Animations
+11.1 Milli Attack — Standing (Top Body) . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11.2 Milli Attack — Crouching (Top Body) . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+21
+21
+21
+
+12 Gun Switching Animation
+
+22
+
+13 Quick Reference — All Animations at a Glance
+
+24
+
+1
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+14 Special Notes & Gaming Techniques
+14.1 Upper + Lower Body Attachment (Multi-Layer Compositing) . . . . . . . . . . . . .
+14.2 Ping-Pong / Palindrome Playback . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.3 Universal Lower Body System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.4 Firing Flash Frames . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.5 Aquatic Body Tilt System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.6 Zombie Hand Overlay System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.7 Mummy Ready-Phase Idle Rule . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.8 Crouch Lower Body Attachment . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.9 Aquatic Biome Transition Rule . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.10General Sprite Composition Rules Summary . . . . . . . . . . . . . . . . . . . . . . .
+
+2
+
+26
+26
+26
+27
+27
+27
+27
+28
+28
+28
+28
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+1 1
+From Air — Without Parachute
+
+Falling
+
+1.0 1
+/ Usage
+
+Purpose
+
+This animation plays whenever the character is airborne and descending without a parachute. Frames
+progress from a fully extended fall posture (tall) to a compact, landing-ready crouch (short). The
+shrinking height across frames gives the visual illusion of the character approaching the ground.
+
+Figure 1: Falling from air — full frame strip (Image 1)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+
+10
+44
+78
+112
+146
+180
+214
+
+18
+42
+113
+139
+166
+195
+217
+
+29
+29
+29
+29
+29
+29
+23
+
+234
+210
+139
+113
+86
+57
+35
+
+ò Note
+
+Notice that y increases and h decreases each frame — this is because the character is
+positioned lower on the sheet as it approaches the ground, and the visible body shrinks into a
+compressed landing pose.
+
+3
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+2 1
+(Idle) Animation
+
+Standing
+
+2.0 1
+/ Usage
+
+Purpose
+
+The default idle loop played whenever the character is stationary and not performing any action.
+Two sub-layers are provided: Top (upper body) and Bottom (lower body). They are composited at
+the hip anchor point.
+Top
+
+2.1 1
+Body — Standing Idle
+
+Figure 2: Standing idle strip (bottom area of Image 1)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+
+10
+43
+76
+109
+
+257
+257
+257
+257
+
+28
+28
+28
+28
+
+26
+26
+26
+26
+Bottom
+
+2.2 1
+Body — Standing Idle
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+
+142
+
+259
+
+20
+
+24
+
+s Rule
+
+Loop frames 1–4 of the top body. The single bottom-body frame is held static for the entire
+idle loop. Composite: upper_body_bottom_y + hip_offset = lower_body_top_y.
+
+4
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+3 1
+Animation
+
+Running
+
+3.0 1
+/ Usage
+
+Purpose
+
+Fast movement loop — triggers when the player holds the run button and moves horizontally. Two
+sub-layers: Top Body and Bottom Body. Both must stay in frame-sync (frame 1 top + frame 1
+bottom, etc.).
+
+Figure 3: Running — top body strip (Image 2)
+
+Figure 4: Running — bottom body strip (Image 3)
+
+Top
+
+3.1 1
+Body — Running
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+Frame 11
+Frame 12
+
+10
+42
+74
+106
+138
+170
+203
+236
+269
+303
+336
+367
+
+500
+501
+502
+501
+500
+500
+501
+502
+502
+503
+501
+501
+
+27
+27
+27
+27
+27
+28
+28
+28
+29
+28
+26
+27
+
+26
+26
+26
+26
+26
+26
+26
+26
+26
+26
+27
+27
+
+5
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Bottom
+
+3.2 1
+Body — Running
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+Frame 11
+Frame 12
+
+10
+37
+67
+99
+129
+151
+174
+200
+231
+266
+295
+318
+
+534
+534
+535
+534
+534
+535
+535
+535
+535
+535
+534
+534
+
+22
+25
+27
+25
+17
+18
+21
+26
+30
+24
+18
+20
+
+26
+25
+23
+26
+26
+25
+25
+23
+25
+25
+26
+26
+
+s Rule
+
+12-frame loop. Top and bottom bodies share the same frame index. Because this is the
+Universal Lower Body, these bottom frames are reused for all weapon configurations (only
+the top body swaps on weapon change).
+
+6
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+4 1
+Walk Animation
+
+Slow
+
+4.0 1
+/ Usage
+
+Purpose
+
+Plays during slow / cautious movement — typically when the player taps move without holding run,
+or during story segments. Uses a 4-frame loop.
+
+Figure 5: Slow walk strip (Image 4)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+
+10
+44
+78
+112
+
+657
+658
+658
+657
+
+29
+29
+29
+30
+
+34
+33
+33
+34
+
+ò Note
+
+The slow walk lower body (universal) is shared from Section 3 bottom frames. Only the top
+body is listed here; use the running bottom body (Section 3.2) unless a dedicated slow-walk
+lower body is specified.
+
+7
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+5 1
+/ Item Pickup Animation
+
+Eat
+
+5.0 1
+/ Usage
+
+Purpose
+
+Triggered when the character picks up a food item or consumes a power-up during gameplay. This
+is a long 52-frame sequence covering the full eat gesture — bending, consuming, and returning to
+normal posture.
+
+Figure 6: Eat / item pickup animation strip (Image 5)
+
+Frames
+
+5.1 1
+1–27 (First Row)
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+Frame 11
+Frame 12
+Frame 13
+Frame 14
+Frame 15
+Frame 16
+Frame 17
+Frame 18
+Frame 19
+Frame 20
+Frame 21
+Frame 22
+Frame 23
+Frame 24
+Frame 25
+Frame 26
+Frame 27
+
+10
+36
+62
+88
+117
+145
+173
+200
+227
+255
+283
+311
+339
+364
+394
+439
+492
+540
+593
+636
+682
+730
+780
+809
+838
+867
+896
+
+338
+339
+340
+339
+339
+339
+339
+339
+339
+340
+342
+342
+336
+333
+341
+335
+344
+346
+347
+347
+347
+347
+348
+349
+348
+348
+348
+
+21
+21
+21
+24
+23
+23
+22
+22
+23
+23
+23
+23
+20
+25
+40
+48
+43
+40
+38
+41
+43
+45
+24
+24
+24
+24
+24
+
+37
+36
+35
+36
+36
+36
+36
+36
+36
+35
+33
+33
+39
+42
+34
+40
+31
+29
+28
+28
+28
+28
+27
+26
+27
+27
+27
+
+8
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Frames
+
+5.2 1
+28–36 (Second Row)
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 28
+Frame 29
+Frame 30
+Frame 31
+Frame 32
+Frame 33
+Frame 34
+Frame 35
+Frame 36
+
+10
+39
+68
+97
+127
+156
+185
+214
+243
+
+382
+382
+380
+383
+382
+382
+382
+382
+380
+
+24
+24
+24
+25
+24
+24
+24
+24
+24
+
+27
+27
+29
+26
+27
+27
+27
+27
+29
+Frames
+
+5.3 1
+37–52 (Third Row)
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 37
+Frame 38
+Frame 39
+Frame 40
+Frame 41
+Frame 42
+Frame 43
+Frame 44
+Frame 45
+Frame 46
+Frame 47
+Frame 48
+Frame 49
+Frame 50
+Frame 51
+Frame 52
+
+10
+41
+74
+105
+135
+166
+202
+238
+269
+297
+324
+351
+378
+408
+439
+470
+
+415
+415
+415
+414
+415
+415
+415
+415
+415
+415
+415
+415
+415
+415
+415
+415
+
+26
+28
+26
+25
+26
+31
+31
+26
+23
+22
+22
+22
+25
+26
+26
+26
+
+37
+37
+37
+38
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+
+ò Note
+
+This is a one-shot animation (plays once, does not loop). After frame 52 the character returns
+to the standing idle (Section 2). Frames 13–22 contain the wide eating-arc posture — note the
+significantly larger w values (up to 48 px) during the actual consumption gesture.
+
+9
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+6 1
+Call (Whistle / Signal) Animation
+
+Neat
+
+6.0 1
+/ Usage
+
+Purpose
+
+The character whistles or signals — used in cut-scenes, scripted events, or when calling for support.
+A 16-frame one-shot sequence covering the raise, whistle, and lower gesture.
+
+Figure 7: Neat call / whistle animation (Image 6)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+Frame 11
+Frame 12
+Frame 13
+Frame 14
+Frame 15
+Frame 16
+
+10
+43
+75
+104
+134
+164
+194
+223
+252
+281
+317
+355
+394
+427
+457
+485
+
+292
+292
+292
+291
+291
+289
+290
+289
+288
+293
+293
+295
+295
+295
+294
+293
+
+28
+27
+24
+25
+25
+25
+24
+24
+24
+31
+33
+34
+28
+25
+23
+22
+
+36
+36
+36
+37
+37
+39
+38
+39
+40
+35
+35
+33
+33
+33
+34
+35
+
+10
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+7 1
+Animations
+
+Jumping
+
+7.0 1
+/ Usage
+
+Purpose
+
+Two jump types are defined — each split into top and bottom body layers. Uses the Palindrome /
+Ping-Pong technique: play frames forward on ascent, reverse on descent. This eliminates a separate
+falling animation.
+
+Figure 8: Jump animations — both types (Image 10)
+
+Straight
+
+7.1 1
+(Stationary) Jump — Top Body
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+
+10
+44
+79
+114
+149
+183
+
+821
+823
+825
+825
+825
+825
+
+29
+30
+30
+30
+29
+28
+
+26
+24
+22
+22
+22
+23
+Straight
+
+7.2 1
+(Stationary) Jump — Bottom Body
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+
+10
+37
+64
+91
+119
+148
+
+853
+853
+853
+853
+853
+853
+
+22
+22
+22
+23
+24
+24
+
+30
+30
+29
+28
+25
+22
+
+11
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Running
+
+7.3 1
+Jump — Top Body
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+
+10
+39
+72
+109
+142
+170
+
+924
+924
+924
+924
+924
+924
+
+24
+28
+32
+28
+23
+23
+
+31
+32
+31
+34
+31
+28
+Running
+
+7.4 1
+Jump — Bottom Body
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+
+10
+43
+78
+116
+151
+186
+
+963
+963
+963
+963
+963
+963
+
+28
+29
+33
+30
+30
+26
+
+23
+21
+19
+17
+17
+19
+
+s Rule
+
+Palindrome rule: Play frames 1→6 on ascent (velocity_y < 0), then 6→1 on descent
+(velocity_y > 0). Top and bottom bodies stay in sync.
+
+12
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+8 1
+Animations
+
+Crouching
+
+8.0 1
+/ Usage
+
+Purpose
+
+Three crouch states: the transition into a crouch, the static crouched idle, and the crouched walk
+cycle.
+
+Figure 9: Crouching animation set (Image 7)
+Ready-
+
+8.1 1
+to-Crouch Transition
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+
+10
+44
+77
+
+1778
+1776
+1777
+
+29
+28
+35
+
+38
+40
+39
+Crouched
+
+8.2 1
+Idle (Sitting, No Action)
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+
+10
+50
+90
+130
+
+1821
+1821
+1821
+1821
+
+35
+35
+35
+35
+
+25
+25
+25
+25
+Crouch
+
+8.3 1
+and Move (Crouch Walk)
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+
+10
+49
+86
+123
+159
+199
+238
+
+1851
+1851
+1851
+1851
+1851
+1851
+1851
+
+34
+32
+32
+31
+35
+34
+33
+
+25
+25
+25
+25
+25
+25
+25
+
+ò Note
+
+When crouching, the lower body sprite is attached directly below the crouching upper body.
+The crouch has its own dedicated lower body — do not substitute the running lower body
+
+13
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+here.
+
+14
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+9 1
+Firing Animations
+
+Pistol
+
+9.0 1
+/ Usage — General Rules
+
+Purpose
+
+All pistol fire sequences follow the same structural rule:
+W CRITICAL
+
+Pistol firing rule: USE ALL FRAMES — do not loop only the first 3 frames for auto-fire
+(that rule applies to the machine gun). The first 6 frames capture the muzzle-flash / recoil
+burst. Frames 7 onward are the recovery / return to aimed posture. For continuous fire: repeat
+frames 1–6. For a single shot: play all frames once.
+Straight
+
+9.1 1
+Fire (Standing)
+
+Figure 10: Straight fire (standing) and straight fire (jumping) — Image 8. Note: label USED WHEN
+JUMPING FORWARD marks the lower row.
+ò Note
+
+This is the top body only. It is used during movement as well as standing. Combine with
+the appropriate lower-body layer (running, walking, or standing idle) at the hip anchor.
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+
+10
+63
+119
+175
+209
+243
+281
+319
+357
+394
+
+994
+994
+993
+992
+991
+994
+994
+994
+994
+993
+
+48
+33
+31
+29
+29
+33
+33
+33
+32
+30
+
+19
+19
+20
+21
+22
+19
+19
+20
+23
+25
+
+15
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Straight
+
+9.2 1
+Fire While Jumping
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+
+10
+63
+118
+174
+208
+242
+280
+318
+356
+393
+
+1026
+1026
+1025
+1024
+1023
+1026
+1026
+1026
+1026
+1025
+
+48
+33
+31
+29
+29
+33
+33
+33
+32
+30
+
+19
+19
+20
+21
+22
+19
+19
+20
+23
+25
+Straight
+
+9.3 1
+Fire While Crouching
+
+Figure 11: Straight fire while crouching (Image 9)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+
+10
+66
+123
+180
+215
+250
+290
+330
+370
+409
+
+1914
+1914
+1913
+1912
+1911
+1914
+1914
+1914
+1914
+1913
+
+51
+44
+32
+30
+30
+35
+35
+35
+34
+35
+
+26
+26
+27
+28
+29
+26
+26
+26
+26
+27
+
+ò Note
+
+Frames 1–6 = active firing loop. Frames 7–10 = recovery (transition back to crouched idle or
+crouch walk).
+Fire
+
+9.4 1
+Upward (Top Fire)
+
+Figure 12: Top fire strip (Image 11)
+
+16
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Figure 13: Top fire auxiliary frames (Image 12)
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+
+10
+34
+59
+83
+107
+131
+154
+179
+207
+234
+
+1654
+1677
+1679
+1680
+1681
+1680
+1682
+1683
+1687
+1690
+
+19
+20
+19
+19
+19
+18
+20
+23
+22
+24
+
+59
+36
+34
+33
+32
+33
+31
+30
+26
+23
+Fire
+
+9.5 1
+Downward (Bottom Fire)
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+
+10
+33
+56
+79
+106
+129
+
+2441
+2441
+2440
+2441
+2441
+2441
+
+18
+18
+18
+22
+18
+18
+
+54
+55
+56
+30
+35
+36
+
+17
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Sliding
+
+9.6 1
+(No Fire)
+
+Figure 14: Sliding and sliding fire strip (Image 13)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+
+10
+49
+85
+121
+161
+
+2299
+2296
+2297
+2298
+2300
+
+34
+31
+31
+35
+46
+
+22
+25
+24
+23
+21
+Sliding
+
+9.7 1
+Fire
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+
+10
+65
+120
+175
+226
+
+2329
+2328
+2327
+2327
+2326
+
+50
+46
+46
+46
+46
+
+21
+21
+22
+23
+24
+
+18
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+10 1
+Animation
+
+Reloading
+
+10.0 1
+/ Usage
+
+Purpose
+
+Triggered when the magazine is empty or the player manually reloads. A long 21-frame sequence
+covering the full reload gesture — lowering the gun, swapping the clip, and raising back to aimed
+posture.
+
+Figure 15: Full reload animation strip (Image 14)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+Frame 11
+Frame 12
+Frame 13
+Frame 14
+Frame 15
+Frame 16
+Frame 17
+Frame 18
+Frame 19
+Frame 20
+Frame 21
+
+10
+47
+81
+114
+157
+200
+244
+288
+327
+366
+406
+444
+480
+516
+556
+596
+648
+704
+756
+813
+872
+
+1064
+1059
+1057
+1063
+1063
+1063
+1063
+1063
+1063
+1063
+1063
+1063
+1063
+1063
+1063
+1063
+1056
+1055
+1063
+1063
+1063
+
+32
+29
+28
+38
+38
+39
+39
+34
+34
+35
+33
+31
+31
+35
+35
+47
+44
+47
+52
+54
+54
+
+23
+28
+32
+25
+24
+22
+27
+25
+25
+24
+25
+25
+25
+24
+25
+23
+33
+39
+35
+36
+36
+
+ò Note
+
+One-shot animation — plays once, does not loop. Frames 17–21 are notably wider (44–54 px)
+because the character holds the magazine/clip away from the body during the swap phase.
+
+19
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+11 1
+Attack (Milli / Knife) Animations
+
+Melee
+
+11.0 1
+/ Usage
+
+Purpose
+
+Close-range melee attack. Two configurations: standing melee and crouching melee. Both are
+top-body animations composited on the appropriate lower body.
+Milli
+
+11.1 1
+Attack — Standing (Top Body)
+
+Figure 16: Milli attack (standing) strip (Image 15)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+
+10
+37
+68
+116
+167
+215
+
+1150
+1150
+1149
+1147
+1139
+1138
+
+22
+26
+35
+46
+43
+42
+
+30
+34
+32
+34
+40
+41
+Milli
+
+11.2 1
+Attack — Crouching (Top Body)
+
+Figure 17: Milli attack (crouching) strip (Image 16)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+
+10
+51
+91
+130
+178
+229
+277
+
+2095
+2095
+2095
+2091
+2089
+2081
+2080
+
+36
+35
+34
+35
+46
+43
+42
+
+25
+25
+25
+29
+31
+39
+40
+
+20
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+12 1
+Switching Animation
+
+Gun
+
+12.0 1
+/ Usage
+
+Purpose
+
+Plays when the player switches from the pistol to another weapon (or vice versa). A 10-frame
+sequence covering the holster-draw gesture. After frame 10 the new weapon’s idle / aim frame takes
+over.
+
+Figure 18: Gun switching strip (Image 17)
+
+Frame
+
+x
+
+y
+
+w
+
+h
+
+Frame 1
+Frame 2
+Frame 3
+Frame 4
+Frame 5
+Frame 6
+Frame 7
+Frame 8
+Frame 9
+Frame 10
+
+10
+40
+71
+104
+138
+173
+206
+237
+270
+309
+
+1480
+1480
+1480
+1481
+1481
+1480
+1480
+1480
+1481
+1479
+
+25
+26
+28
+29
+30
+28
+26
+28
+34
+32
+
+24
+27
+25
+24
+23
+32
+31
+26
+19
+21
+
+ò Note
+
+One-shot transition animation. The lower body remains in standing idle throughout. After
+frame 10 immediately snap to the first frame of the new weapon’s aim pose.
+
+21
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Quick
+
+13 1
+Reference — All Animations at a Glance
+Animation
+
+Frames Section
+
+Type
+
+Notes
+Height shrinks per
+frame
+
+Falling (no chute)
+
+7
+
+1
+
+One-shot
+
+Standing Idle — Top
+Standing Idle — Bot
+Running — Top
+Running — Bottom
+Slow Walk
+Eat / Pickup
+Neat Call
+Straight Jump Top
+Straight Jump Bot
+Running Jump Top
+Running Jump Bot
+Crouch Transition
+Crouch Idle
+Crouch Walk
+Straight Fire
+Fire While Jumping
+Fire While Crouching
+Top Fire
+Bottom Fire
+Slide (no fire)
+Sliding Fire
+
+4
+1
+12
+12
+4
+52
+16
+6
+6
+6
+6
+3
+4
+7
+10
+10
+10
+10
+6
+5
+5
+
+2.1
+2.2
+3.1
+3.2
+4
+5
+6
+7.1
+7.2
+7.3
+7.4
+8.1
+8.2
+8.3
+9.1
+9.2
+9.3
+9.4
+9.5
+9.6
+9.7
+
+Loop
+Static hold
+Loop
+Loop
+Loop
+One-shot
+One-shot
+Palindrome
+Palindrome
+Palindrome
+Palindrome
+One-shot
+Loop
+Loop
+Top only
+Top only
+Full body
+Top only
+Top only
+One-shot
+One-shot
+
+Reload
+
+21
+
+10
+
+One-shot
+
+Milli — Standing
+Milli — Crouching
+Gun Switch
+
+6
+7
+10
+
+11.1
+11.2
+12
+
+One-shot
+One-shot
+One-shot
+
+22
+
+Universal top
+Universal lower
+Uses running lower
+3-row layout
+
+Frames 1–6 fire
+Frames 1–6 fire
+Frames 1–6 fire
+
+Wide at frames
+17-21
+Top only
+Top only
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Special
+
+14 1
+Notes & Gaming Techniques
+
+The following rules govern how all animations in this document are combined, sequenced, and
+rendered in a production game engine. Techniques are drawn from Metal Slug, Cuphead, Guilty Gear,
+Street Fighter, and similar sprite-based titles.
+Upper
+
+14.1 1
++ Lower Body Attachment (Multi-Layer Compositing)
+
+Technique: Composite Layering
+(Metal Slug, Cuphead, Guilty Gear)
+Attach the upper body to the lower body at the hip joint anchor point. Keep a consistent Y
+offset between the base of the upper sprite and the top of the lower sprite. This offset must remain
+constant across all frames for a seamless seam.
+upperb odyb ottomy + hipo f f set = lowerb odyt opy
+s Rule
+
+• For crouching: lower body is always attached directly below the crouching upper body.
+• For standing / running: use the universal lower body (Sections 3.2 and 4).
+• The hip offset must be validated per animation set to avoid vertical "pop".
+Ping-
+
+14.2 1
+Pong / Palindrome Playback
+
+Technique: Palindrome Animation
+(Street Fighter, Metal Slug series)
+Used for: Straight Jump (Section 7.1/7.2), Running Jump (Section 7.3/7.4).
+Play forward on ascent (frames 1 → N), then reverse on descent (frames N → 1). This eliminates
+the need for a separate set of falling frames and creates a natural gravity arc.
+if (velocityy
+<
+0)
+:
+//ascendingplayf orward(f rames)if (velocityy
+//descendingplayr everse(f rames)if (velocityy == 0) : //apexhold(lastf rame)
+
+>
+
+0)
+
+:
+
+Universal
+
+14.3 1
+Lower Body System
+
+Technique: Modular Animation
+(Dragon’s Crown, Metal Slug X)
+The slow-walk and fast-run lower bodies (Sections 3.2 and 4) are shared across ALL weapon
+configurations. This avoids duplicating lower-body frames for every weapon variant.
+W CRITICAL
+
+• When the weapon changes, only swap the upper body.
+• The lower body stays the same.
+• Exception 1: Crouching has its own lower body (Section 8.3).
+• Exception 2: Injured walk has its own lower body (defined in future sections).
+Firing
+
+14.4 1
+Flash Frames
+Technique: Squash & Stretch Flash
+(Metal Slug, Contra)
+For all fire animations the first three frames represent the muzzle flash / recoil burst: dark flash
+→ blurred flash → escape.
+
+23
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+After frame 3 the character transitions back to the adjusted / held fire pose.
+W CRITICAL
+
+• Pistol: USE ALL FRAMES (do not loop only first 3 for auto-fire).
+• Machine gun: 4-frame burst loop (covered in the next document).
+• All other firing: all frames play once, then hold the last frame.
+Aquatic
+
+14.5 1
+Body Tilt System
+Technique: Procedural Tilt Blending
+(Broforce, Terraria)
+Swimming upper body has 3 tilt states: Straight (0°), Slight Tilt, More Tilt. Each tilt state
+has 3 sub-states: Still, Active Swim, Swim Up.
+if (velocityy < 0) : playf orward//goingupif (velocityy > 0) : playr everse//goingdown
+
+Match body tilt to gun angle for realism:
+• Straight tilt → gun aimed horizontally
+• Slight tilt → gun aimed slightly up / down
+• More tilt → gun aimed steeply up / down
+Zombie
+
+14.6 1
+Hand Overlay System
+
+Technique: Sprite Layering / Z-Order Compositing
+(Castlevania, zombie-type characters)
+The zombie hand is a separate sprite drawn on top of the body. Two hand types: Straight
+Hand and Up Hand. Each has its own frames for: Simple Movement, Fast Movement, Jump, and
+Fire.
+s Rule
+
+Match hand frame index exactly to body frame index (1:1 synchronisation).
+Mummy
+
+14.7 1
+Ready-Phase Idle Rule
+
+Load the mummy ready phase every time the character is not walking. This must be checked each
+frame.
+if (isw alking == f alse) : playr eadyp hasel oop()
+
+Crouch
+
+14.8 1
+Lower Body Attachment
+
+When crouching, the lower body is always attached directly below the crouching upper body (see
+Section 8). Crouching fire, sliding fire, and crouch melee all have their lower body attached in this
+manner.
+ò Note
+
+Do not substitute the running lower body for the crouch lower body — they have different
+heights and hip positions, and mixing them causes a visible seam jump.
+
+24
+
+Fiolina Germi — Sprite Sheet Reference
+
+Pistol Only
+
+Aquatic
+
+14.9 1
+Biome Transition Rule
+
+When the biome changes from any biome to the Aquatic biome, the character plays the enteringwater jump animation before the swim loop activates.
+if (biomec hangedt o == AQU AT IC) : playo nce(enterw aterj umpa nim)thens tart(swiml oop)
+
+General
+
+14.10 1
+Sprite Composition Rules Summary
+Rule
+
+Description
+
+Hip Anchor Constant
+
+The Y offset between upper and lower body never
+varies within a weapon config.
+
+One Weapon = One Top
+Body
+Loop vs One-Shot
+Palindrome Jumps
+Pistol: All Frames
+Frame-Sync Layers
+Crouch Has Own Lower
+Biome Entry Plays Once
+
+Swapping weapons only replaces the top body layer.
+Idle, run, walk, and crouch-walk loop. All others are
+one-shot unless stated.
+All jump animations play forward on rise, reverse on
+fall.
+Never truncate the pistol fire sequence to 3-frame loop.
+Top and bottom body frame indices must always
+match.
+Never reuse the run/walk lower body for crouch states.
+Water entry animation fires exactly once per biome
+transition.
+
+End of Document — Fiolina Germi Pistol Sprite Reference v1.0
+Machine Gun configuration will be documented in the next part.
+
+25
+
+
