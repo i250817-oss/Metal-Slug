@@ -6,9 +6,9 @@
 
 ## 👥 Team
 
--> **Muhammad Osaid Zahid** — Group Leader
+-> **Muhammad Osaid Zahid** ( Group Leader )
 
--> **[Your Name]** — Developer
+-> **Ahmad Ali Shah** ( Developer )
 
 ---
 
